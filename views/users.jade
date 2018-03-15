@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    h1 Task Tracker
+    p View Your Daily Tasks
+    a(href="/") Home 
+
+    // Wrapper
+    #wrapper    
+    
+        // USER LIST
+        h2 Task List
+        #userList
+            table
+                thead
+                    th TASK
+                    th Email
+                    th Description
+                    th Delete?
+                tbody
+        // /USER LIST
+
+        // USER INFO
+        #userInfo
+            h2 Task Info
+            p
+                strong TASK:
+                |  <span id='userInfoName'></span>
+                br
+                strong DATE:
+                |  <span id='userInfoAge'></span>
+                br
+                strong Start By:
+                |  <span id='userInfoLocation'></span>
+                br
+                strong Finish By:
+                |  <span id='userInfoGender'></span>
+        // /USER INFO

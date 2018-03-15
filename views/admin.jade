@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to Task Tracker
+
+    
+        // USER LIST
+        h2 Task List
+        #userList
+            table
+                thead
+                    th TASK
+                    th Email
+                    th Description
+                    th Delete?
+                tbody
+        // /USER LIST
+
+        
+        // ADD USER
+        h2 Add TASK
+        #addUser
+            fieldset
+                strong T:
+                input#inputUserName(type='text', placeholder='TASKNAME')
+                strong AT:
+                input#inputUserEmail(type='text', placeholder='ASSIGNED TO Email')
+                br
+                strong FN:
+                input#inputUserFullname(type='text', placeholder='Full Name')
+                strong Desc:
+                input#inputUserAge(type='text', placeholder='Description')
+                br
+                strong Start Date:
+                input#inputUserLocation(type='date', placeholder='Start Date')
+                strong Finnish By:
+                input#inputUserGender(type='date', placeholder='Finish By')
+                br
+                button#btnAddUser Add User
+        // /ADD USER
+
+    

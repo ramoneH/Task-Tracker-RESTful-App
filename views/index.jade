@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1 Task Tracker
+    p Welcome to the Task Tracker App
+
+        .container
+            if (!user)
+                a(href="/login") Login
+                br
+                a(href="/register") Register
+                br
+                a(href="/admin") Admin
+                br
+                a(href="/users") Users
+            if (user)
+                p You are currently logged in as #{user.username}
+                a(href="/logout") Logout
+                a(href="/users") Continue
+        
